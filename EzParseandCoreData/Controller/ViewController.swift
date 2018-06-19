@@ -102,7 +102,15 @@ extension ViewController: UITableViewDataSource {
         cell.winnerLabel.text = team.winner.description
         cell.lostLabel.text = team.lost.description
         cell.drawnLabel.text = team.drawn.description
-        cell.flagImageView.image = try! UIImage(data: Data(contentsOf: team.flag))
+        //cell.flagImageView.image = team.flag_img
+        
+        DispatchQueue.global(qos: .background).async {
+            let data = try! Data(contentsOf: team.flag)
+            let image: UIImage = UIImage(data: data) ?? UIImage()
+            DispatchQueue.main.async(execute: {
+                cell.flagImageView.image = image
+            })
+        }
         return cell
     }
 }
