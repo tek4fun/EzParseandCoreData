@@ -16,9 +16,11 @@
 		0E22DFA920D798CE00041304 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E22DFA820D798CE00041304 /* APIService.swift */; };
 		0E22DFAB20D79A3B00041304 /* WorldCup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E22DFAA20D79A3B00041304 /* WorldCup.swift */; };
 		0E22DFB420D7B38100041304 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E22DFB220D7B38100041304 /* CustomTableViewCell.swift */; };
+		E0CECA8E8A420D079EE8F281 /* Pods_EzParseandCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13D4ABFE4697B2C465FA38E /* Pods_EzParseandCoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BDFD32B4BCEA683EFF0E123 /* Pods-EzParseandCoreData.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EzParseandCoreData.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EzParseandCoreData/Pods-EzParseandCoreData.debug.xcconfig"; sourceTree = "<group>"; };
 		0E22DF8C20D796C700041304 /* EzParseandCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EzParseandCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E22DF8F20D796C700041304 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E22DF9120D796C700041304 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +32,8 @@
 		0E22DFA820D798CE00041304 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		0E22DFAA20D79A3B00041304 /* WorldCup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCup.swift; sourceTree = "<group>"; };
 		0E22DFB220D7B38100041304 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		2E65F26AC724F1CACACF43B8 /* Pods-EzParseandCoreData.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EzParseandCoreData.release.xcconfig"; path = "Pods/Target Support Files/Pods-EzParseandCoreData/Pods-EzParseandCoreData.release.xcconfig"; sourceTree = "<group>"; };
+		C13D4ABFE4697B2C465FA38E /* Pods_EzParseandCoreData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EzParseandCoreData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0CECA8E8A420D079EE8F281 /* Pods_EzParseandCoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +53,8 @@
 			children = (
 				0E22DF8E20D796C700041304 /* EzParseandCoreData */,
 				0E22DF8D20D796C700041304 /* Products */,
+				1B5716B9765D767BD5A62B18 /* Pods */,
+				B466F9B47F2EB152CAA39D35 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +115,23 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		1B5716B9765D767BD5A62B18 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0BDFD32B4BCEA683EFF0E123 /* Pods-EzParseandCoreData.debug.xcconfig */,
+				2E65F26AC724F1CACACF43B8 /* Pods-EzParseandCoreData.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B466F9B47F2EB152CAA39D35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C13D4ABFE4697B2C465FA38E /* Pods_EzParseandCoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E22DFA120D796D200041304 /* Build configuration list for PBXNativeTarget "EzParseandCoreData" */;
 			buildPhases = (
+				C1273F8EA697BFCC0C947AB6 /* [CP] Check Pods Manifest.lock */,
 				0E22DF8820D796C700041304 /* Sources */,
 				0E22DF8920D796C700041304 /* Frameworks */,
 				0E22DF8A20D796C700041304 /* Resources */,
+				1CA7156391209A9A49DDA9BE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -173,6 +199,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1CA7156391209A9A49DDA9BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EzParseandCoreData/Pods-EzParseandCoreData-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EzParseandCoreData/Pods-EzParseandCoreData-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1273F8EA697BFCC0C947AB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EzParseandCoreData-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0E22DF8820D796C700041304 /* Sources */ = {
@@ -326,6 +391,7 @@
 		};
 		0E22DFA220D796D200041304 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BDFD32B4BCEA683EFF0E123 /* Pods-EzParseandCoreData.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -345,6 +411,7 @@
 		};
 		0E22DFA320D796D200041304 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E65F26AC724F1CACACF43B8 /* Pods-EzParseandCoreData.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

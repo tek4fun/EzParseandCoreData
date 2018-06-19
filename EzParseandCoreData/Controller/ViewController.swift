@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Kingfisher
 
 class ViewController: UIViewController {
     var groups : Groups!
@@ -102,15 +103,7 @@ extension ViewController: UITableViewDataSource {
         cell.winnerLabel.text = team.winner.description
         cell.lostLabel.text = team.lost.description
         cell.drawnLabel.text = team.drawn.description
-        //cell.flagImageView.image = team.flag_img
-        
-        DispatchQueue.global(qos: .background).async {
-            let data = try! Data(contentsOf: team.flag)
-            let image: UIImage = UIImage(data: data) ?? UIImage()
-            DispatchQueue.main.async(execute: {
-                cell.flagImageView.image = image
-            })
-        }
+        cell.flagImageView.kf.setImage(with: team.flag)
         return cell
     }
 }
