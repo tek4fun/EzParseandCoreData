@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var groups : Groups!
     var context = NSManagedObjectContext()
     @IBOutlet weak var worldCupTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -54,7 +55,7 @@ class ViewController: UIViewController {
         }
         
     }
-
+    
     func fetchFromCoreData() {
         let worldCupFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "WorldCup")
         let worldCup = try! context.fetch(worldCupFetch) as! [NSManagedObject]
@@ -77,8 +78,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-
 }
 
 extension ViewController: UITableViewDataSource {
@@ -106,7 +105,4 @@ extension ViewController: UITableViewDataSource {
         cell.flagImageView.image = try! UIImage(data: Data(contentsOf: team.flag))
         return cell
     }
-    
-    
 }
-

@@ -10,7 +10,6 @@ import UIKit
 
 class APIService: NSObject {
     let baseUrl : String! = "http://worldcup.thienthan.vn/v1/groups"
-    //var groups : Groups!
     
     func getData(completion: @escaping (_ any: Groups) -> Void) {
         var urlRequest = URLRequest(url: URL(string: baseUrl)!)        
