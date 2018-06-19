@@ -25,7 +25,8 @@ class ViewController: UIViewController {
             DispatchQueue.main.async {
                 self.worldCupTable.dataSource = self
                 self.worldCupTable.reloadData()
-                self.saveToCoreData()
+                //self.saveToCoreData()
+                self.saveToCoreDatav2()
                 self.fetchFromCoreData()
             }
         }
@@ -55,6 +56,29 @@ class ViewController: UIViewController {
             }
         }
         
+    }
+    
+    func saveToCoreDatav2() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        context = appDelegate.persistentContainer.viewContext
+        deleteOldData()
+        for group in groups.groups {
+            for team in group.teamsGroup {
+                let worldCup = WorldCup(context: context)
+                worldCup.group = group.title
+                worldCup.id = Int32(team.id)
+                worldCup.drawn = Int32(team.drawn)
+                worldCup.winner = Int32(team.winner)
+                worldCup.lost = Int32(team.lost)
+                worldCup.flag = team.flag.description
+                worldCup.team_Name = team.teamName
+                do {
+                    try context.save()
+                } catch let error as NSError {
+                    print("Failed Saving! \(error)")
+                }
+            }
+        }
     }
     
     func fetchFromCoreData() {
