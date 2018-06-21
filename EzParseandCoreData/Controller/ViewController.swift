@@ -20,7 +20,18 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         worldCupTable.dataSource = nil
         let apiService = APIService()
-        apiService.getData { (groups) in
+//        apiService.getData { (groups) in
+//            self.groups = groups
+//            DispatchQueue.main.async {
+//                self.worldCupTable.dataSource = self
+//                self.worldCupTable.reloadData()
+//                //self.saveToCoreData()
+//                self.saveToCoreDatav2()
+//                self.fetchFromCoreData()
+//            }
+//        }
+        
+        apiService.getDataAlamofire { (groups) in
             self.groups = groups
             DispatchQueue.main.async {
                 self.worldCupTable.dataSource = self

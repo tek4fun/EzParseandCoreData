@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class APIService: NSObject {
     let baseUrl : String! = "http://worldcup.thienthan.vn/v1/groups"
@@ -38,5 +39,16 @@ class APIService: NSObject {
                 } 
             }
         }.resume()
+    }
+    
+    func getDataAlamofire(completion: @escaping (_ any: Groups) -> Void) {
+        let urlRequest = URLRequest(url: URL(string: baseUrl)!)
+        Alamofire.request(urlRequest).response { (response) in
+            guard let datas = try? JSONDecoder().decode(Datas.self, from: response.data!) else {
+                print("Error: Couldn't decode data into Group")
+                return
+            }
+            completion(datas.datas)
+        }
     }
 }

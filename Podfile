@@ -7,4 +7,5 @@ target 'EzParseandCoreData' do
 
   # Pods for EzParseandCoreData
 	pod 'Kingfisher'
+	pod 'Alamofire', '~> 4.7'
 end
